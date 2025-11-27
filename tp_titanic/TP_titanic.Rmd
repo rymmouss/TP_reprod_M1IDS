@@ -1,0 +1,43 @@
+---
+title: "tp_titanic"
+author: "Rym MOUSLI"
+date: "2025-11-27"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# TP Titanic
+
+```{r}
+library(carData)
+head(TitanicSurvival)
+```
+
+# Desciption 
+```{r}
+summary(TitanicSurvival)
+```
+
+# 
+```{r}
+library(ggplot2)
+ggplot(TitanicSurvival, aes(survived,fill=sex)) +
+  geom_bar(position = "dodge",width = 0.4)+
+  theme_minimal()
+```
+```{r}
+ggplot(TitanicSurvival, aes(passengerClass,fill=survived)) +
+  geom_bar(position = "dodge",width = 0.3)
+```
+```{r}
+ggplot(TitanicSurvival, aes(survived,age)) +
+  geom_boxplot() +
+  theme_minimal()
+```
+
+
+```
+
